@@ -15,7 +15,7 @@
 
 <style>
 *{
-box-sizing:border-box;user-select: none;outline:none;cursor: auto;
+box-sizing:border-box;user-select: none;
 }
 body{
 text-align:center;
@@ -26,24 +26,23 @@ margin:0;
 position:absolute;top:0;bottom:0;left:0;right:0;
 }
 #header{
-top:0;height:30%;background-color:black;background-image:url('img/m2.jpg');background-size:contain;background-position:center;background-repeat: no-repeat;
+top:0;height:30%;background-color:black;background-image:url('img/failed.jpg');background-size:contain;background-position:center;background-repeat: no-repeat;
 }
 #scoreboard{
-font-size:23px;font-family:georgia; border-radius:20px;background-color:#070;padding:25px;margin-left:10%;margin-right:10%;line-height:80%;border:2px dotted white;
+font-size:23px;font-family:georgia; border-radius:20px;background-color:#700;padding:25px;margin-left:10%;margin-right:10%;line-height:110%;border:2px dotted white;
 }
 #option{
 font-size:28px;font-family:garamond; background-color:#00f;margin-left:10%;margin-right:10%;
 }
 #left{
-float:left;width:49.5%;background-color:#c00;padding:10px;color:white;
+float:left;width:49.5%;background-color:#008;padding:10px;color:white;
 }
 #right{
-float:left;width:49.5%;background-color:#c00;padding:10px;margin-left:1%;color:white;
+float:left;width:49.5%;background-color:#008;padding:10px;margin-left:1%;color:white;
 }
 a{
 cursor: default;
 }
-
 </style>
 
 
@@ -56,36 +55,25 @@ history.pushState(null, null, location.href);
 </script>
 
 
-
 </head>
 
 <body>
 
+
 <div id="contain">
-<div id="header"></div>
+<div id="header">
+</div>
 <div id="scoreboard">
-Time Taken : <span id='score'> </span><br><br>
-Best Time : <span id="highscore"> </span>
+You have Failed. Only Touch the Red Box.<br> Try Again.
 </div><br><br>
 <div id="option">
 
-<a href="gmedium.html"><div id="left">Play<br>Again</div></a>
+<a href="game_easy.html"><div id="left">Play<br>Again</div></a>
 <a href="index.html"><div id="right">Main<br>Menu</div></a>
 
 </div>
 
 </div>
-<script>
-function play(){
-var audio = new Audio('sound/win.mp3');
-audio.play();}
-setTimeout(play, 200);
-
-
-document.getElementById('highscore').innerHTML=localStorage.getItem('mediumhighscore');
-
-document.getElementById('score').innerHTML=localStorage.getItem('mediumscore');
-</script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">app.initialize();</script>

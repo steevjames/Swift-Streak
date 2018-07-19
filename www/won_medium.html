@@ -15,7 +15,7 @@
 
 <style>
 *{
-box-sizing:border-box;user-select: none;
+box-sizing:border-box;user-select: none;outline:none;cursor: auto;
 }
 body{
 text-align:center;
@@ -26,7 +26,7 @@ margin:0;
 position:absolute;top:0;bottom:0;left:0;right:0;
 }
 #header{
-top:0;height:30%;background-color:black;background-image:url('img/m3.jpg');background-size:contain;background-position:center;background-repeat: no-repeat;
+top:0;height:30%;background-color:black;background-image:url('img/m2.jpg');background-size:contain;background-position:center;background-repeat: no-repeat;
 }
 #scoreboard{
 font-size:23px;font-family:georgia; border-radius:20px;background-color:#070;padding:25px;margin-left:10%;margin-right:10%;line-height:80%;border:2px dotted white;
@@ -43,6 +43,7 @@ float:left;width:49.5%;background-color:#c00;padding:10px;margin-left:1%;color:w
 a{
 cursor: default;
 }
+
 </style>
 
 
@@ -68,7 +69,7 @@ Best Time : <span id="highscore"> </span>
 </div><br><br>
 <div id="option">
 
-<a href="ghard.html"><div id="left">Play<br>Again</div></a>
+<a href="game_medium.html"><div id="left">Play<br>Again</div></a>
 <a href="index.html"><div id="right">Main<br>Menu</div></a>
 
 </div>
@@ -80,9 +81,10 @@ var audio = new Audio('sound/win.mp3');
 audio.play();}
 setTimeout(play, 200);
 
-document.getElementById('highscore').innerHTML=localStorage.getItem('hardhighscore');
 
-document.getElementById('score').innerHTML=localStorage.getItem('hardscore');
+document.getElementById('highscore').innerHTML=localStorage.getItem('mediumhighscore');
+
+document.getElementById('score').innerHTML=localStorage.getItem('mediumscore');
 </script>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
