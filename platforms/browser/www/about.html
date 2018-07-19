@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+    <title>Swift Streak</title>
+	<style>
+@font-face {
+    font-family: "paperfont";
+    src: url(img/pap.ttf);
+}
+
+*{
+box-sizing:border-box;user-select:none;outline:none;
+}
+body{
+margin:0; overflow:auto;background-attachment:fixed;background-size:cover;background-color:#444;
+}
+#box{
+text-align:center;color:black;background-color:rgba(0,0,0,.5);overflow:auto;padding:10px;font-size:18px;position:absolute;font-weight:bold;
+left:2.5%;right:2.5%;top:3%;bottom:3%;
+background-image:url('img/logo.png');background-repeat: no-repeat;background-attachment: fixed;background-position: 50% 50%;background-position: center; background-size:50vw;
+}
+a{
+text-decoration:none;color:white;
+}
+.inside{
+text-align:left;transform:translate(5%,0);margin-right:10%;font-family:paperfont;
+}
+.sp{
+font-size:200%;color:red;font-family:georgia;
+}
+#button{
+border:none; padding:8px; background-color:#444;padding-left:20px;padding-right:20px;color:white;
+}
+	</style>
+</head>
+
+<body>
+<div id="box">
+<div style="background-color:rgba(255,255,255,.8);overflow:auto;position:absolute;top:0;bottom:0;left:0;right:0;">
+<h1 style="font-family:courier;color:#000;border-bottom:2px solid red;padding-bottom:10px;"><b>About</b></h1>
+<div id="list3" class="inside">
+<br>
+When you think your reflexes cannot be better, you are underestimating yourselves ! <br><br>
+<span style="color:#a00;">
+How fast can you react ? <br>
+How accurately can you react ?<br><br>
+</span>
+With this game, you can improve your best reflex times. It is healthy for the brain, play daily for the best experience !
+<br><br>
+
+<p><b>*</b> This Game is low in size<br><b>*</b> It does not run in the background.<br><b>*</b> Requires no permissions <br>
+<b>*</b> There are no ads.
+<br><b>*</b> Please take the time to Rate the App Five stars. :)</p><br>
+<div style="border-top:2px solid red;padding:10px; padding-bottom:0;"><br>Created By 
+<a href="#" style="text-decoration:none;" onclick="window.open('http://www.steevjames.ga', '_system', 'location=yes');">
+<span style="color:#f00;"><b>Steev James.</b></span> 
+</a>
+</div>
+
+
+<p style="text-align:center;"><a href="index.html"><button id="button"><b>BACK</b></button></a></p>
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+    <title>Swift Streak</title>
+	<style>
+@font-face {
+    font-family: "paperfont";
+    src: url(img/pap.ttf);
+}
+*{
+box-sizing:border-box;user-select:none;outline:none;
+}
+body{
+margin:0; overflow:auto;background-attachment:fixed;background-size:cover;background-color:#444;
+}
+#box{
+text-align:center;color:black;background-color:rgba(0,0,0,.5);overflow:auto;padding:10px;font-size:18px;position:absolute;
+left:2.5%;right:2.5%;top:3%;bottom:3%;background-image:url('img/min.jpg');font-weight:bold;
+background-image:url('img/logo.png');background-repeat: no-repeat;background-attachment: fixed;background-position: 50% 50%;background-position: center; background-size:50vw;
+}
+a{
+text-decoration:none;color:white;
+}
+.inside{
+text-align:left;transform:translate(5%,0);margin-right:10%;font-family:paperfont;
+}
+.sp{
+font-size:200%;color:red;
+}
+#button{
+border:none; padding:8px; background-color:#444;padding-left:20px;padding-right:20px;color:white;
+}
+.sp{
+font-size:200%;color:red;
+}
+a{
+cursor: default;
+}
+	</style>
+	
+		<script type="text/javascript">
+history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+        window.location.replace('index.html');
+    };
+</script>
+
+</head>
+
+<body>
+
+<div id="box">
+<div style="background-color:rgba(255,255,255,.8);overflow:auto;position:absolute;top:0;bottom:0;left:0;right:0;">
+<h1 style="font-family:courier;color:#000;border-bottom:2px solid red;padding-bottom:10px;"><b>How To Play</b></h1>
+<div id="list3" class="inside">
+<br>
+<span class="sp">*</span> Click 'Start' button to start playing.<br>
+<span class="sp">*</span> Click on the Red box / Cirlce.<br>
+<span class="sp">*</span> The location of Box/Cirlce will change. Now press the new location.<br>
+<span class="sp">*</span> Continue this proccess till the number of times is over.<br>
+<span class="sp">*</span> A new page shows the Time you took and your best time.
+<br>
+<p style="text-align:center;">The easy and medium modes are easy. Hard mode requires accuracy & is the best part of the game.</p>
+<div style="border-top:2px solid red;"></div>
+<p style="text-align:center;"><a href="index.html"><button id="button"><b>BACK</b></button></a></p>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<widget xmlns = "http://www.w3.org/ns/widgets" 
+   xmlns:gap = "http://phonegap.com/ns/1.0" id = "com.steevjames.amelioratecelerity" version = "1.0.6">
+   
+   <name>Swift Streak</name>
+   
+   <description>
+      Reduce your reflex time, keep your brain in good condition by playing daily.
+   </description>
+   
+   <author href = "http://steevjames.blogspot.com" email = "steevjames@gmail.com">
+      Steev James
+   </author>
+   
+ 
+ <preference name="android-minSdkVersion" value="19" />
+ <preference name="android-targetSdkVersion" value="26" />
+ 
+ 
+   <preference name = "permissions" value = "none"/>
+   
+
+
+<splash src="img/splash.jpg"  />
+
+   
+   
+   <icon src = "img/logo.png" />
+   
+</widget>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+    <title>Swift Streak</title>
+	
+<style>
+*{
+box-sizing:border-box;user-select:none;outline:none;
+}
+#contain
+{
+position:absolute;left:0px;right:0px;top:50px;bottom:0px;border: 1px solid #fff;background-color:#ddd;background-image:url('abc/7.jpg');background-size:cover;
+}
+#topbar
+{
+position:absolute;left:0px;right:0px;top:0px;height:50px;overflow:hidden; border: 1px solid #fff;border-bottom:0;
+background-image:url('abc/7.jpg');background-size:cover;color:black;
+}
+#ltopbar
+{
+width:40%;height:50px;float:left;text-align:center;padding:15px;font-size:3vh; white-space: nowrap ;
+}
+#mtopbar
+{
+width:20%;height:50px;float:left;text-align:center;padding:15px;font-size:3vh;border-left:1px solid #f00;color:white;background-color:rgba(20,20,20,.4);
+}
+#rtopbar
+{
+width:40%;height:50px;float:left;text-align:center;padding:15px;font-size:3vh;border-left:1px solid #f00;
+}
+#box{
+position:absolute;height:30px;width:30px;background-color:red;overflow:hidden;color:red;border-radius:20px;display:none;
+}
+#btnstyle{
+padding:5px;font-size:110%;border:1px dotted black; background-color:black;color:white;
+}
+#dial{
+position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);text-align:center;font-size:250%;
+}
+a{
+cursor: default;
+}
+
+</style>
+<script type="text/javascript">
+history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+        history.go(1);
+    };
+</script>
+
+</head>
+
+<body>
+
+
+
+
+<div id="topbar">
+<div style="background-color:rgba(255,255,255,0.6);position:absolute;left:0;right:0;top:0;bottom:0;">
+<div id="ltopbar"> Remaining: <span id="sco1">50</span></div>
+<a href="index.html"><div id="mtopbar"><b>QUIT</b></div></a>
+<div id="rtopbar"> TIME: <span id="sco2">0</span></div>
+</div>
+</div>
+
+
+<a href="fmedium.html"><div id="contain"> 
+<div style="position:absolute;left:0;right:0;top:0;bottom:0;background-color:rgba(0,0,0,.3);">
+<object><a href="#s"><div id="box" onclick="shuffle();">.</div></a></object>
+<div id="dial">
+<object><a href="#s"><input id="btnstyle" type="button" onclick="start()" value="START"></a></object>
+</div>
+</div>
+</div></a>
+
+
+<script type="text/javascript">
+var width = document.getElementById('contain').offsetWidth;
+var height = document.getElementById('contain').offsetHeight;
+var score=51;
+var time=new Date();
+var timediff=0;
+var interval;
+
+
+
+function shuffle()
+{
+if(score==1) 
+	{
+	end(); 
+	return
+	}
+else
+	{
+	
+	if((score%4)==0) var audio = new Audio('sound/1.mp3');
+	if((score%4)==1) var audio = new Audio('sound/2.mp3');
+	if((score%4)==2) var audio = new Audio('sound/3.mp3');
+	if((score%4)==3) var audio = new Audio('sound/4.mp3');
+	audio.play();
+	width = document.getElementById('contain').offsetWidth;
+	height = document.getElementById('contain').offsetHeight;
+	score=score-1;
+	document.getElementById('sco1').innerHTML=score;
+	document.getElementById('box').style.left= (Math.floor(Math.random() * (width-34))).toString()+'px';
+	document.getElementById('box').style.top=  (Math.floor(Math.random() * (height-34))).toString()+'px';
+	}
+}
+function end()
+{
+document.getElementById('sco1').innerHTML=0;
+clearInterval(interval);
+window.localStorage.setItem('mediumscore',timediff);
+if (Number(localStorage.getItem('mediumhighscore'))>timediff || window.localStorage.getItem('mediumhighscore')=='none') 
+    {
+    window.localStorage.setItem('mediumhighscore',timediff);
+    }
+window.location.replace('wmedium.html');
+}
+
+function check()
+{
+timediff=(new Date())-time;
+timediff=timediff/1000;
+timediff=Math.round(timediff*10)/10;
+if(timediff%1==0) timediff=timediff.toFixed(1);
+document.getElementById('sco2').innerHTML=timediff;
+
+}
+
+function start()
+{
+document.getElementById('dial').style.display='none';
+document.getElementById('box').style.display='block';
+shuffle();
+time=new Date();
+interval= setInterval(check, 20);
+}
+
+
+function changeBGColor() {
+var a= Math.floor(Math.random() *11)+1;
+if(a==1) document.getElementById('contain').style.backgroundImage = "url('abc/1.jpg')";
+if(a==2) document.getElementById('contain').style.backgroundImage = "url('abc/2.jpg')";
+if(a==3) document.getElementById('contain').style.backgroundImage = "url('abc/3.jpg')";
+if(a==4) document.getElementById('contain').style.backgroundImage = "url('abc/4.jpg')";
+if(a==5) document.getElementById('contain').style.backgroundImage = "url('abc/5.jpg')";
+if(a==6) document.getElementById('contain').style.backgroundImage = "url('abc/6.jpg')";
+if(a==7) document.getElementById('contain').style.backgroundImage = "url('abc/7.jpg')";
+if(a==8) document.getElementById('contain').style.backgroundImage = "url('abc/8.jpg')";
+if(a==9) document.getElementById('contain').style.backgroundImage = "url('abc/9.jpg')";
+if(a==10) document.getElementById('contain').style.backgroundImage = "url('abc/10.jpg')";
+if(a==11) document.getElementById('contain').style.backgroundImage = "url('abc/11.jpg')";
+
+
+if(a==1) document.getElementById('topbar').style.backgroundImage = "url('abc/1.jpg')";
+if(a==2) document.getElementById('topbar').style.backgroundImage = "url('abc/2.jpg')";
+if(a==3) document.getElementById('topbar').style.backgroundImage = "url('abc/3.jpg')";
+if(a==4) document.getElementById('topbar').style.backgroundImage = "url('abc/4.jpg')";
+if(a==5) document.getElementById('topbar').style.backgroundImage = "url('abc/5.jpg')";
+if(a==6) document.getElementById('topbar').style.backgroundImage = "url('abc/6.jpg')";
+if(a==7) document.getElementById('topbar').style.backgroundImage = "url('abc/7.jpg')";
+if(a==8) document.getElementById('topbar').style.backgroundImage = "url('abc/8.jpg')";
+if(a==9) document.getElementById('topbar').style.backgroundImage = "url('abc/9.jpg')";
+if(a==10) document.getElementById('topbar').style.backgroundImage = "url('abc/10.jpg')";
+if(a==11) document.getElementById('topbar').style.backgroundImage = "url('abc/11.jpg')";
+}
+
+changeBGColor();
+
+</script>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>

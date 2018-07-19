@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+    <title>Swift Streak</title>
+	<style>
+*{
+box-sizing:border-box;user-select:none;animation: fadein 1s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@font-face {
+    font-family: "impactr";
+    src: url(img/impactr.ttf) format("truetype");
+}
+@font-face {
+    font-family: "paperfont";
+    src: url(img/pap.ttf);
+}
+body{
+margin:1px; overflow:hidden; background-color:#555;background-size:cover;font-family:paperfont;color:white;
+
+
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);,1) 0%, rgba(0,128,128,1) 100%);
+
+
+
+}
+#contain{
+overflow:hidden;position:absolute;left:5px;right:5px;top:20vh;bottom:5px;
+}
+.lblock{
+left:0;width:100%;height:33%;position:absolute;text-align:center;font-size:8vw;animation:ofpart 5s infinite;
+}
+.child {
+position: relative;top: 50%;transform:translate(0%,-50%);color:white;
+}
+#precontain{
+font-size:10vh;position:absolute;top:0vh;height:20vh;text-align:center;overflow:hidden;left:5px;right:5px;
+}
+#rightc{
+overflow:hidden;position:absolute;left:50%;right:0;top:0;bottom:0;color:white;padding:10px;background-color:rgba(255,255,255,.2);font-weight: bold;
+animation:dis 1.5s;animation:bg 10s infinite;
+}
+#leftc{
+position:absolute;right:50%;left:0;top:0;bottom:0;background-color:rgba(255,255,255,.2);font-family:impactr;animation:dis 1.5s;
+animation:bg 10s infinite;
+}
+#logo{
+height:18vh;text-align:center;
+}
+.part{
+padding-top:1vh;padding-bottom:1vh;height:20vh;text-align:center;border-radius:10px;
+}
+.block{
+background-color:rgba(0,30,0,.8);height:100%;font-size:4vh;animation: button 8s infinite;overflow:hidden;
+}
+a{
+color:inherit;text-decoration:none;
+}
+@keyframes button{
+0%{background-color:rgba(10,10,0,.8);}
+50%{background-color:rgba(0,0,30,.6);}
+100%{background-color:rgba(10,10,0,.8);}
+}
+@keyframes button2{
+0%{background-color:rgba(0,0,30,.6);}
+50%{background-color:rgba(10,10,0,.8);}
+100%{background-color:rgba(0,0,30,.6);}
+}
+@keyframes arr{
+0% {top:0vh;}
+100%{top:3vh;}
+}
+#arrow{
+position:relative;animation: arr 1.5s infinite;
+}
+@keyframes dis{
+0% {opacity:0;}
+100%{opacity:100%;}
+}
+@keyframes bg{
+0% {background-color:rgba(255,255,255,.4);}
+50% {background-color:rgba(0,0,0,.2);}
+100%{background-color:rgba(255,255,255,.4);}
+}
+
+@keyframes ofpart{
+0% {filter:hue-rotate(5deg);}
+50% {filter:hue-rotate(-5deg);}
+100%{filter:hue-rotate(5deg);}
+}
+
+</style>
+	
+	<script type="text/javascript">
+history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+        navigator.app.exitApp();;
+    };
+</script>
+
+</head>
+<!-- 
+Comic Sans MS
+-->
+<body>
+<div id="leftc">
+<div id="precontain"><div class="child" style="font-size:5vh;color:white;">PLAY<br><div id="arrow">↓</div></div></div>
+<div id="contain">
+<a href="geasy.html"><div class="lblock" style="top:0;background-color:#f00;"><div class="child">EASY</div></div></a>
+<a href="gmedium.html"><div class="lblock" style="top:33%;background-color:#c00;"><div class="child">MEDIUM</div></div></a>
+<a href="ghard.html"><div class="lblock" style="top:66%;background-color:#a00;"><div class="child">HARD</div></div></a>
+</div>
+</div>
+
+
+<div id="rightc">
+<a href="hscore.html"><div class="part">
+<div class="block" style="animation: button2 8s infinite;"><div class="child">Highscores</div></div>
+</div></a>
+
+<a href="htp.html"><div class="part">
+<div class="block" style=""><div class="child">How to Play</div></div>
+</div></a>
+
+<div id="logo"><img src="img/logo.png" style="max-height:100%;max-width:45vw;"/></div>
+
+<a href="about.html"><div class="part">
+<div class="block" style="animation: button2 8s infinite;"><div class="child">About</div></div>
+</div></a>
+
+<a href="#"><div class="part">
+<div class="block"><div class="child" onclick="navigator.app.exitApp();">Exit</div></div>
+</div></a>
+
+
+</div>
+
+<script>
+	if(window.localStorage.getItem('easyhighscore')==null) window.localStorage.setItem('easyhighscore','none');
+	if(window.localStorage.getItem('mediumhighscore')==null) window.localStorage.setItem('mediumhighscore','none');
+	if(window.localStorage.getItem('hardhighscore')==null) window.localStorage.setItem('hardhighscore','none');
+	
+	</script>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+	</div>
+
+</html>
