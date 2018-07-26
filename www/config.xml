@@ -1,7 +1,7 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 
 <widget xmlns = "http://www.w3.org/ns/widgets" 
-   xmlns:gap = "http://phonegap.com/ns/1.0" id = "com.steevjames.amelioratecelerity" version = "1.0.6">
+   xmlns:gap = "http://phonegap.com/ns/1.0" id = "com.steevjames.amelioratecelerity" version = "1.0.7">
    
    <name>Swift Streak</name>
    
@@ -14,18 +14,17 @@
    </author>
    
  
- <preference name="android-minSdkVersion" value="19" />
- <preference name="android-targetSdkVersion" value="26" />
+	<preference name="android-minSdkVersion" value="19" />
+	<preference name="android-targetSdkVersion" value="26" />
  
  
-   <preference name = "permissions" value = "none"/>
+	<plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
+	<allow-intent href="*" />
    
 
 
 <splash src="img/splash.jpg"  />
+<icon src = "img/logo.png" />
 
-   
-   
-   <icon src = "img/logo.png" />
-   
+ 
 </widget>
