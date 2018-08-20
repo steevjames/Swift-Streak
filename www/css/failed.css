@@ -1,29 +1,70 @@
-*{
-    box-sizing:border-box;user-select: none;
-    }
-    body{
-    text-align:center;
-    background-color:black;color:white;
-    margin:0;
-    }
-    #contain{
-    position:absolute;top:0;bottom:0;left:0;right:0;
-    }
-    #header{
-    top:0;height:30%;background-color:black;background-image:url('../img/failed.jpg');background-size:contain;background-position:center;background-repeat: no-repeat;
-    }
-    #scoreboard{
-    font-size:23px;font-family:georgia; border-radius:20px;background-color:#700;padding:25px;margin-left:10%;margin-right:10%;line-height:110%;border:2px dotted white;
-    }
-    #option{
-    font-size:28px;font-family:garamond; background-color:#00f;margin-left:10%;margin-right:10%;
-    }
-    #left{
-    float:left;width:49.5%;background-color:#008;padding:10px;color:white;
-    }
-    #right{
-    float:left;width:49.5%;background-color:#008;padding:10px;margin-left:1%;color:white;
-    }
-    a{
-    cursor: default;
-    }
+* {
+	box-sizing: border-box;
+	user-select: none;
+}
+
+body {
+	text-align: center;
+	background-color: black;
+	color: white;
+	margin: 0;
+}
+
+#contain {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+#header {
+	top: 0;
+	height: 30%;
+	background-color: black;
+	background-image: url('../img/failed.jpg');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#scoreboard {
+	font-size: 23px;
+	font-family: georgia;
+	border-radius: 20px;
+	background-color: #700;
+	padding: 25px;
+	margin-left: 10%;
+	margin-right: 10%;
+	line-height: 110%;
+	border: 2px dotted white;
+}
+
+#option {
+	font-size: 28px;
+	font-family: garamond;
+	background-color: #00f;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+#left {
+	float: left;
+	width: 49.5%;
+	background-color: #008;
+	padding: 10px;
+	color: white;
+}
+
+#right {
+	float: left;
+	width: 49.5%;
+	background-color: #008;
+	padding: 10px;
+	margin-left: 1%;
+	color: white;
+}
+
+a {
+	cursor: default;
+}

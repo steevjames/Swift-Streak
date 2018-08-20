@@ -178,35 +178,59 @@ interval= setInterval(check, 20);
 }
 
 
-function changeBGColor() {
-var a= Math.floor(Math.random() *11)+1;
-if(a==1) document.getElementById('contain').style.backgroundImage = "url('backgrounds/1.jpg')";
-if(a==2) document.getElementById('contain').style.backgroundImage = "url('backgrounds/2.jpg')";
-if(a==3) document.getElementById('contain').style.backgroundImage = "url('backgrounds/3.jpg')";
-if(a==4) document.getElementById('contain').style.backgroundImage = "url('backgrounds/4.jpg')";
-if(a==5) document.getElementById('contain').style.backgroundImage = "url('backgrounds/5.jpg')";
-if(a==6) document.getElementById('contain').style.backgroundImage = "url('backgrounds/6.jpg')";
-if(a==7) document.getElementById('contain').style.backgroundImage = "url('backgrounds/7.jpg')";
-if(a==8) document.getElementById('contain').style.backgroundImage = "url('backgrounds/8.jpg')";
-if(a==9) document.getElementById('contain').style.backgroundImage = "url('backgrounds/9.jpg')";
-if(a==10) document.getElementById('contain').style.backgroundImage = "url('backgrounds/10.jpg')";
-if(a==11) document.getElementById('contain').style.backgroundImage = "url('backgrounds/11.jpg')";
+// function changeBGColor() {
+// var a= Math.floor(Math.random() *11)+1;
+// if(a==1) document.getElementById('contain').style.backgroundImage = "url('backgrounds/1.jpg')";
+// if(a==2) document.getElementById('contain').style.backgroundImage = "url('backgrounds/2.jpg')";
+// if(a==3) document.getElementById('contain').style.backgroundImage = "url('backgrounds/3.jpg')";
+// if(a==4) document.getElementById('contain').style.backgroundImage = "url('backgrounds/4.jpg')";
+// if(a==5) document.getElementById('contain').style.backgroundImage = "url('backgrounds/5.jpg')";
+// if(a==6) document.getElementById('contain').style.backgroundImage = "url('backgrounds/6.jpg')";
+// if(a==7) document.getElementById('contain').style.backgroundImage = "url('backgrounds/7.jpg')";
+// if(a==8) document.getElementById('contain').style.backgroundImage = "url('backgrounds/8.jpg')";
+// if(a==9) document.getElementById('contain').style.backgroundImage = "url('backgrounds/9.jpg')";
+// if(a==10) document.getElementById('contain').style.backgroundImage = "url('backgrounds/10.jpg')";
+// if(a==11) document.getElementById('contain').style.backgroundImage = "url('backgrounds/11.jpg')";
 
 
-if(a==1) document.getElementById('topbar').style.backgroundImage = "url('backgrounds/1.jpg')";
-if(a==2) document.getElementById('topbar').style.backgroundImage = "url('backgrounds/2.jpg')";
-if(a==3) document.getElementById('topbar').style.backgroundImage = "url('backgrounds/3.jpg')";
-if(a==4) document.getElementById('topbar').style.backgroundImage = "url('backgrounds/4.jpg')";
-if(a==5) document.getElementById('topbar').style.backgroundImage = "url('backgrounds/5.jpg')";
-if(a==6) document.getElementById('topbar').style.backgroundImage = "url('backgrounds/6.jpg')";
-if(a==7) document.getElementById('topbar').style.backgroundImage = "url('backgrounds/7.jpg')";
-if(a==8) document.getElementById('topbar').style.backgroundImage = "url('backgrounds/8.jpg')";
-if(a==9) document.getElementById('topbar').style.backgroundImage = "url('backgrounds/9.jpg')";
-if(a==10) document.getElementById('topbar').style.backgroundImage = "url('backgrounds/10.jpg')";
-if(a==11) document.getElementById('topbar').style.backgroundImage = "url('backgrounds/11.jpg')";
+// if(a==1) document.getElementById('topbar').style.backgroundImage = "url('backgrounds/1.jpg')";
+// if(a==2) document.getElementById('topbar').style.backgroundImage = "url('backgrounds/2.jpg')";
+// if(a==3) document.getElementById('topbar').style.backgroundImage = "url('backgrounds/3.jpg')";
+// if(a==4) document.getElementById('topbar').style.backgroundImage = "url('backgrounds/4.jpg')";
+// if(a==5) document.getElementById('topbar').style.backgroundImage = "url('backgrounds/5.jpg')";
+// if(a==6) document.getElementById('topbar').style.backgroundImage = "url('backgrounds/6.jpg')";
+// if(a==7) document.getElementById('topbar').style.backgroundImage = "url('backgrounds/7.jpg')";
+// if(a==8) document.getElementById('topbar').style.backgroundImage = "url('backgrounds/8.jpg')";
+// if(a==9) document.getElementById('topbar').style.backgroundImage = "url('backgrounds/9.jpg')";
+// if(a==10) document.getElementById('topbar').style.backgroundImage = "url('backgrounds/10.jpg')";
+// if(a==11) document.getElementById('topbar').style.backgroundImage = "url('backgrounds/11.jpg')";
+// }
+
+// changeBGColor();
+
+
+function newGradient() {
+  var c1 = {
+        r: Math.floor(Math.random()*150),
+        g: Math.floor(Math.random()*150),
+        b: Math.floor(Math.random()*150)
+      };
+      var c2 = {
+        r: Math.floor(Math.random()*150),
+        g: Math.floor(Math.random()*150),
+        b: Math.floor(Math.random()*150)
+      };
+  c1.rgb = 'rgb('+c1.r+','+c1.g+','+c1.b+')';
+  c2.rgb = 'rgb('+c2.r+','+c2.g+','+c2.b+')';
+  document.getElementById('contain').style.background=  'radial-gradient(at top left, '+c1.rgb+', '+c2.rgb+')';
+  document.getElementById('topbar').style.background=  'radial-gradient(at top left, '+c1.rgb+', '+c2.rgb+')';
 }
 
-changeBGColor();
+function rollBg() {
+newGradient();
+  setTimeout(function(){rollBg();}, 10000);
+}
+rollBg();
 
 </script>
 

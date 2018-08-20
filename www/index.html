@@ -7,97 +7,10 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
     <title>Swift Streak</title>
+
+    <link rel="stylesheet" href="css/index.css">
+
 	<style>
-*{
-box-sizing:border-box;user-select:none;animation: fadein 1s;
-}
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-@font-face {
-    font-family: "impactr";
-    src: url(img/impactr.ttf) format("truetype");
-}
-@font-face {
-    font-family: "paperfont";
-    src: url(img/pap.ttf);
-}
-body{
-margin:1px; overflow:hidden; background-color:#555;background-size:cover;font-family:paperfont;color:white;
-
- background: linear-gradient(to right, #00f260, #0575e6);
-
-
-
-}
-#contain{
-overflow:hidden;position:absolute;left:5px;right:5px;top:20vh;bottom:5px;
-}
-.lblock{
-left:0;width:100%;height:33%;position:absolute;text-align:center;font-size:8vw;animation:ofpart 5s infinite;
-}
-.child {
-position: relative;top: 50%;transform:translate(0%,-50%);color:white;
-}
-#precontain{
-font-size:10vh;position:absolute;top:0vh;height:20vh;text-align:center;overflow:hidden;left:5px;right:5px;
-}
-#rightc{
-overflow:hidden;position:absolute;left:50%;right:0;top:0;bottom:0;color:white;padding:10px;background-color:rgba(255,255,255,.2);font-weight: bold;
-animation:dis 1.5s;
-}
-#leftc{
-position:absolute;right:50%;left:0;top:0;bottom:0;background-color:rgba(255,255,255,.2);font-family:impactr;animation:dis 1.5s;
-}
-#logo{
-height:18vh;text-align:center;
-}
-.part{
-padding-top:1vh;padding-bottom:1vh;height:20vh;text-align:center;border-radius:10px;
-}
-.block{
-background-color:rgba(0,30,0,.8);height:100%;font-size:4vh;animation: button 8s infinite;overflow:hidden;
-}
-a{
-color:inherit;text-decoration:none;
-}
-@keyframes button{
-0%{background-color:rgba(10,10,0,.8);}
-50%{background-color:rgba(0,0,30,.6);}
-100%{background-color:rgba(10,10,0,.8);}
-}
-@keyframes button2{
-0%{background-color:rgba(0,0,30,.6);}
-50%{background-color:rgba(10,10,0,.8);}
-100%{background-color:rgba(0,0,30,.6);}
-}
-@keyframes arr{
-0% {top:0vh;}
-100%{top:3vh;}
-}
-#arrow{
-position:relative;animation: arr 1.5s infinite;
-}
-@keyframes dis{
-0% {opacity:0;}
-100%{opacity:100%;}
-}
-@keyframes bg{
-0% {background-color:rgba(255,255,255,.4);}
-50% {background-color:rgba(0,0,0,.2);}
-100%{background-color:rgba(255,255,255,.4);}
-}
-
-@keyframes ofpart{
-0% {filter:hue-rotate(5deg);}
-50% {filter:hue-rotate(-5deg);}
-100%{filter:hue-rotate(5deg);}
-}
-a{
-cursor: default;
-}
 
 </style>
 	
